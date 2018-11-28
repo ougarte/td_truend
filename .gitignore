@@ -1,0 +1,10 @@
+// Generated directories
+node_modules
+build
+webpack.js
+
+// Developers: IDEs, editors, tools, etc...
+.vscode
+
+// Others
+.DS_Store
