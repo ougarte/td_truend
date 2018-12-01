@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Container } from 'semantic-ui-react'
-import { AppRouter } from './appRouter'
 import AppSidebar from './appSidebar'
 import UserPage from './userPage'
 import RepositoryPage from './repositoryPage'

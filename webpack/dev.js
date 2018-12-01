@@ -3,7 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 export default {
 	mode: 'development',
-	entry: './src/index.jsx',
+	entry: ['@babel/polyfill', './src/index.jsx'],
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'build')
