@@ -1,0 +1,13 @@
+{
+	"pages": [{
+		"name": "users",
+		"route": "/users",
+		"componentName": "UserPage",
+		"iconName": "users"
+	}, {
+		"name": "repositories",
+		"route": "/repositories",
+		"componentName": "RepositoryPage",
+		"iconName": "code"
+	}]
+}

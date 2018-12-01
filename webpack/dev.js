@@ -11,10 +11,11 @@ export default {
 	resolve: {
 		extensions: ['.js', '.jsx'],
 		alias: {
-			'@core/ui': path.resolve(__dirname, 'src')
+			'@core': path.resolve(__dirname, 'src')
 		}
 	},
 	devServer: {
+		historyApiFallback: true,
 		contentBase: path.join(__dirname, 'build')
 	},
 	module: {
