@@ -42,9 +42,9 @@ export const fetchUsers = async () => {
 // =============================================================================
 // API REPOSITORIES
 // =============================================================================
-export const fetchRepository = async (full_name) => {
+export const fetchRepository = async (reponame) => {
 	try {
-		const response = await api.get(`/repos/${full_name}`)
+		const response = await api.get(`/repos/${reponame}`)
 		const repository = transformResponse(response)
 
 		return repository

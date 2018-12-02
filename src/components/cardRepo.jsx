@@ -17,6 +17,7 @@ export default class CardRepo extends Component {
 				</Card.Content>
 				<Card.Content extra>
 					<span>Opened issues {open_issues_count}</span>
+					<br />
 					<span>Forks {forks_count}</span>
 				</Card.Content>
 			</Card>
