@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Image, Icon } from 'semantic-ui-react'
 
-export default class UserListItem extends Component {
+export default class CardUser extends Component {
 	render() {
 		const { created_at, avatar_url, name, location, html_url } = this.props
 		const createdDate = new Date(created_at)

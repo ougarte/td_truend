@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Header } from 'semantic-ui-react'
-import UserList from './userList'
+import CardList from './common/cardList'
+import CardUser from './cardUser'
 
 export default class UserPage extends Component {
+	get userCards () {
+		return this.props.users.map(user => (<CardUser key={user.id} {...user} />))
+	}
+
 	render() {
 		return (
 			<React.Fragment>
 				<Header as="h1" >User Page</Header>
-				<UserList users={this.props.users} />
+				<CardList cardPerRow={5} cards={this.userCards} />
 			</React.Fragment>
 		)
 	}
