@@ -10,6 +10,9 @@ const api = axios.create({
 	}
 })
 
+// =============================================================================
+// API USERS
+// =============================================================================
 export const fetchUser = async (username) => {
 	try {
 		const response = await api.get(`/users/${username}`)
@@ -33,5 +36,34 @@ export const fetchUsers = async () => {
 	} catch (error) {
 		logger.error(error)
 		throw new Error('INVALID_GET_USERS')
+	}
+}
+
+// =============================================================================
+// API REPOSITORIES
+// =============================================================================
+export const fetchRepository = async (full_name) => {
+	try {
+		const response = await api.get(`/repos/${full_name}`)
+		const repository = transformResponse(response)
+
+		return repository
+	} catch (error) {
+		logger.error(error)
+		throw new Error('INVALID_GET_REPOSITORY')
+	}
+}
+
+export const fetchRepositories = async () => {
+	try {
+		const response = await api.get('/repositories')
+		const data = transformResponse(response)
+		const fetchs = data.map(item => fetchRepository(item.full_name))
+		const repositories = await Promise.all(fetchs)
+
+		return repositories
+	} catch (error) {
+		logger.error(error)
+		throw new Error('INVALID_GET_REPOSITORIES')
 	}
 }

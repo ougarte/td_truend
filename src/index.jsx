@@ -16,9 +16,7 @@ import '@babel/polyfill'
 import 'semantic-ui-css/semantic.min.css'
 import './custom.css'
 
-const store = createStore(users, composeWithDevTools(
-  applyMiddleware(logger, thunk),
-))
+const store = createStore(users, composeWithDevTools(applyMiddleware(logger, thunk)))
 const onLoad = () => store.dispatch(loadUsers())
 const container = document.getElementById('app')
 const application = (

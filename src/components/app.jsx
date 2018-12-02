@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Container } from 'semantic-ui-react'
-import { connect } from 'react-redux'
 import AppSidebar from './appSidebar'
 import { container as UserPage } from './userPage'
 import { container as RepositoryPage } from './repositoryPage'
