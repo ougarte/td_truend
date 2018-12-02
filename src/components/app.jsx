@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Container } from 'semantic-ui-react'
+import { connect } from 'react-redux'
 import AppSidebar from './appSidebar'
-import UserPage from './userPage'
-import RepositoryPage from './repositoryPage'
+import { container as UserPage } from './userPage'
+import { container as RepositoryPage } from './repositoryPage'
 
 /**
  * @class Application
@@ -27,6 +28,10 @@ export default class Application extends Component {
 		})
 
 		this.state = { pages }
+	}
+
+	componentDidMount() {
+		this.props.onLoad()
 	}
 
 	render() {

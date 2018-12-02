@@ -23,7 +23,7 @@ class AppSidebar extends Component {
 				<Sidebar as={Menu} visible vertical icon="labeled" width='thin'>
 					{ this.menuItems }
 				</Sidebar>
-				<Sidebar.Pusher direction={'left'}>
+				<Sidebar.Pusher direction={'left'} >
 					<Segment basic>
 						<AppRouter pages={pages} />
 					</Segment>
